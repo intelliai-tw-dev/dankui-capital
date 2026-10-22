@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>丹奎投資有限公司 | Intelliai Capital Co., Ltd.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0A0F1D;
+            color: #E2E8F0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.6);
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.15);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF 0%, #D4AF37 50%, #997A15 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tech-blue-text {
+            background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- 導覽列 Navbar -->
+    <nav class="w-full px-6 py-4 border-b border-slate-800/80 flex justify-between items-center fixed top-0 bg-[#0A0F1D]/90 z-40 backdrop-blur-md">
+        <div class="flex items-center space-x-3">
+            <!-- Logo Icon Mockup -->
+            <div class="w-10 h-10 rounded-full border-2 border-[#D4AF37] flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 shadow-lg">
+                <span class="text-[#D4AF37] font-bold text-lg">丹奎</span>
+            </div>
+            <div>
+                <span class="text-lg font-bold tracking-wider text-white">丹奎投資</span>
+                <span class="text-xs text-slate-400 block tracking-widest uppercase">Intelliai Capital</span>
+            </div>
+        </div>
+        <div class="hidden md:flex space-x-6 text-sm text-slate-300">
+            <a href="#market" class="hover:text-[#D4AF37] transition">市場指標</a>
+            <a href="#pillars" class="hover:text-[#D4AF37] transition">核心理念</a>
+            <button onclick="toggleModal()" class="text-[#00F2FE] border border-[#00F2FE]/40 px-3 py-1 rounded-full hover:bg-[#00F2FE]/10 transition">📢 官方公告</button>
+        </div>
+    </nav>
+
+    <!-- 主視覺 Hero Section -->
+    <header class="pt-36 pb-16 px-6 text-center max-w-4xl mx-auto">
+        <div class="inline-block px-4 py-1.5 rounded-full border border-[#D4AF37]/40 bg-[#D4AF37]/10 text-[#D4AF37] text-xs font-semibold tracking-widest mb-6">
+            FAMILY OFFICE & STRATEGIC CAPITAL
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+            煉丹之精 ‧ 聚奎之智<br>
+            <span class="gold-gradient-text">穩健傳承與前瞻資本</span>
+        </h1>
+        <p class="text-slate-400 text-base md:text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+            丹奎投資（Intelliai Capital）立足家族資本之信任與穩健，深耕<span class="text-rose-400 font-medium">生物科技</span>與<span class="tech-blue-text font-medium">AI晶片半導體</span>雙引擎，致力於推動人類健康與智慧科技的長遠未來。
+        </p>
+        <div class="flex justify-center space-x-4">
+            <a href="#market" class="bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-slate-950 font-bold px-6 py-3 rounded-xl hover:opacity-90 transition shadow-lg">
+                即時市場觀測站
+            </a>
+            <button onclick="toggleModal()" class="glass-card px-6 py-3 rounded-xl text-slate-200 hover:text-white transition">
+                檢視最新公告
+            </button>
+        </div>
+    </header>
+
+    <!-- 核心亮點：即時市場觀測站（包含三個指定內容） -->
+    <section id="market" class="max-w-6xl mx-auto px-6 py-12 w-full">
+        <div class="text-center mb-10">
+            <h2 class="text-2xl font-bold tracking-wide text-white">即時市場動態與公告視窗</h2>
+            <p class="text-sm text-slate-400 mt-1">整合總體經濟指標、全球情緒數據與丹奎投資官方聲明</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            
+            <!-- 項目 1：台灣景氣燈號 -->
+            <a href="https://index.ndc.gov.tw/n/zh_tw" target="_blank" rel="noopener noreferrer" class="glass-card p-6 rounded-2xl transition duration-300 group block">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-2xl">📊</span>
+                    <span class="text-xs text-[#D4AF37] border border-[#D4AF37]/30 px-2 py-0.5 rounded">國家發展委員會</span>
+                </div>
+                <h3 class="text-lg font-bold text-white group-hover:text-[#D4AF37] transition">台灣景氣對策燈號</h3>
+                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                    實時追蹤台灣總體經濟擴張與收縮訊號，作為資產配置與景氣循環之判斷基準。
+                </p>
+                <div class="mt-6 flex items-center text-xs text-[#00F2FE] font-medium">
+                    前往國發會觀測頁面 <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+            </a>
+
+            <!-- 項目 2：CNN 恐懼貪婪指標 -->
+            <a href="https://edition.cnn.com/markets/fear-and-greed?utm_source=hp" target="_blank" rel="noopener noreferrer" class="glass-card p-6 rounded-2xl transition duration-300 group block">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-2xl">😱</span>
+                    <span class="text-xs text-[#00F2FE] border border-[#00F2FE]/30 px-2 py-0.5 rounded">CNN Markets</span>
+                </div>
+                <h3 class="text-lg font-bold text-white group-hover:text-[#00F2FE] transition">CNN 恐懼與貪婪指標</h3>
+                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                    監測美股與全球資本市場動量、避險需求與極端情緒，輔助市場風險控管。
+                </p>
+                <div class="mt-6 flex items-center text-xs text-[#00F2FE] font-medium">
+                    前往 CNN 市場恐懼指數 <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+            </a>
+
+            <!-- 項目 3：官方公告視窗卡片 -->
+            <div class="glass-card p-6 rounded-2xl border-rose-500/30 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-2xl">📢</span>
+                        <span class="text-xs bg-rose-500/20 text-rose-300 border border-rose-500/40 px-2 py-0.5 rounded">即時廣播</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">丹奎投資 官方公告</h3>
+                    <p class="text-xs text-slate-300 mt-2 line-clamp-2">
+                        【系統公告】2026 年第 3 季家族資產研報已發布，請開啟公告視窗檢視詳細內容...
+                    </p>
+                </div>
+                <button onclick="toggleModal()" class="mt-6 w-full py-2 bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-amber-300 rounded-lg border border-amber-500/30 transition">
+                    開啟文字公告視窗
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 核心定位：丹 / 奎 / 家族資本 -->
+    <section id="pillars" class="max-w-6xl mx-auto px-6 py-12 w-full">
+        <div class="grid md:grid-cols-3 gap-8 text-left">
+            <div class="p-6 border-l-2 border-rose-500 bg-slate-900/40 rounded-r-xl">
+                <div class="text-xs font-bold text-rose-400 tracking-widest uppercase mb-1">BIOTECH ADVANCEMENT</div>
+                <h4 class="text-xl font-bold text-white mb-2">「丹」── 生醫與健康</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    象徵如古法煉丹般的精準與執著。專注於新藥研發、精準醫療與預防醫學，為人類健康與生命品質作出實質貢獻。
+                </p>
+            </div>
+            <div class="p-6 border-l-2 border-[#00F2FE] bg-slate-900/40 rounded-r-xl">
+                <div class="text-xs font-bold text-[#00F2FE] tracking-widest uppercase mb-1">SILICON & AI EVOLUTION</div>
+                <h4 class="text-xl font-bold text-white mb-2">「奎」── 晶圓與 AI</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    象徵將大地之砂化為矽晶 IC。深入佈局半導體供應鏈、前瞻晶片與人工智慧演算法，驅動下個世代的科技進程。
+                </p>
+            </div>
+            <div class="p-6 border-l-2 border-[#D4AF37] bg-slate-900/40 rounded-r-xl">
+                <div class="text-xs font-bold text-[#D4AF37] tracking-widest uppercase mb-1">FAMILY LEGACY</div>
+                <h4 class="text-xl font-bold text-white mb-2">家族資本 ── 穩健傳承</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    以跨世代的嚴謹風控與誠信為基石。秉持 Intelliai 現代智慧思維，實現資本的長期增值與家族信任傳承。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 彈出式公告文字視窗 Modal Window -->
+    <div id="noticeModal" class="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-50 hidden">
+        <div class="glass-card max-w-lg w-full rounded-2xl p-6 relative border border-[#D4AF37]/50 shadow-2xl">
+            <!-- 關閉按鈕 -->
+            <button onclick="toggleModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">✕</button>
+            
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="w-3 h-3 bg-amber-400 rounded-full animate-ping"></span>
+                <h3 class="text-lg font-bold text-[#D4AF37]">丹奎投資有限公司 官方公告</h3>
+            </div>
+            
+            <div class="space-y-4 text-sm text-slate-300 max-h-60 overflow-y-auto pr-2 border-t border-b border-slate-800 py-4 my-4">
+                <div>
+                    <span class="text-xs text-slate-500">2026-09-20 | 策略公告</span>
+                    <p class="font-semibold text-white mt-0.5">【家族資產配置與總體市場展望】</p>
+                    <p class="text-xs text-slate-400 mt-1">
+                        因應全球 AI 算力基礎設施擴建與生醫基因療法的突破，丹奎投資（Intelliai Capital）已完成 2026 年第三季的投資組合動態調整。重點加碼半導體晶圓封裝與臨床新創資產。
+                    </p>
+                </div>
+                <div>
+                    <span class="text-xs text-slate-500">2026-08-15 | 合規聲明</span>
+                    <p class="font-semibold text-white mt-0.5">【免責與合規提醒】</p>
+                    <p class="text-xs text-slate-400 mt-1">
+                        本公司網站所載之台灣景氣燈號與 CNN 恐懼貪婪指標連結僅供內部研究與訪客參考，不構成任何型式之投資邀約或個股推薦。
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-right">
+                <button onclick="toggleModal()" class="bg-[#D4AF37] text-slate-950 font-bold text-xs px-5 py-2 rounded-lg hover:bg-amber-400 transition">
+                    確認並關閉
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾 Footer -->
+    <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500">
+        <p>© 2026 丹奎投資有限公司 Intelliai Capital Co., Ltd. All Rights Reserved.</p>
+        <p class="mt-2 text-slate-600">本網站資訊僅供家族辦公室內部交流與品牌形象展示。</p>
+    </footer>
+
+    <!-- JavaScript 彈窗控制 logic -->
+    <script>
+        function toggleModal() {
+            const modal = document.getElementById('noticeModal');
+            modal.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
