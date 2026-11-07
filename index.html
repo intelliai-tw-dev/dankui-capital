@@ -1,215 +1,226 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>丹奎投資有限公司 | Intelliai Capital Co., Ltd.</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            background-color: #0A0F1D;
-            color: #E2E8F0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
-        .glass-card {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-        }
-        .glass-card:hover {
-            border-color: rgba(212, 175, 55, 0.6);
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.15);
-        }
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #FFF 0%, #D4AF37 50%, #997A15 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .tech-blue-text {
-            background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>丹奎投資有限公司 | Intelliai Capital Co., Ltd.</title>
+<style>
+:root{--bg:#f3f7fb;--surface:rgba(255,255,255,.82);--line:rgba(20,60,110,.16);--text:#0f1b2d;--muted:#51657c;--bio:#07946a;--si:#1f5fd0;--gold:#8f7010;--nav:rgba(243,247,251,.88);--grid:rgba(20,60,110,.06);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#050a14;--surface:rgba(12,22,38,.74);--line:rgba(110,190,255,.17);--text:#e6edf6;--muted:#8da2b8;--bio:#2de2a6;--si:#58a3ff;--gold:#d4af37;--nav:rgba(5,10,20,.86);--grid:rgba(110,190,255,.05)}}
+:root[data-theme="dark"]{--bg:#050a14;--surface:rgba(12,22,38,.74);--line:rgba(110,190,255,.17);--text:#e6edf6;--muted:#8da2b8;--bio:#2de2a6;--si:#58a3ff;--gold:#d4af37;--nav:rgba(5,10,20,.86);--grid:rgba(110,190,255,.05)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",Roboto,Arial,sans-serif;line-height:1.7;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:44px 44px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--nav);z-index:60}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);background:var(--nav);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-weight:700;font-size:14px;color:#04121c;background:linear-gradient(135deg,var(--bio),var(--si))}
+.brand b{display:block;font-size:16px;letter-spacing:.12em;line-height:1.2}
+.brand small{display:block;font-size:10px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase}
+.links{display:flex;align-items:center;gap:22px;font-size:14px;color:var(--muted)}
+.links a:hover{color:var(--bio)}
+.pill{border:1px solid var(--si);color:var(--si);background:none;padding:6px 14px;border-radius:999px;font:inherit;font-size:13px;cursor:pointer}
+.pill:hover{background:color-mix(in srgb,var(--si) 14%,transparent)}
+@media(max-width:700px){.links a{display:none}}
+header.hero{position:relative;overflow:hidden;padding:150px 0 90px;min-height:620px}
+#helix{position:absolute;right:0;top:0;width:48%;height:100%;opacity:.95}
+@media(max-width:860px){#helix{width:100%;opacity:.28}}
+.hero .wrap{position:relative;z-index:2}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.2em;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--bio)}
+.tag i{width:7px;height:7px;border-radius:50%;background:var(--bio);box-shadow:0 0 10px var(--bio)}
+h1{font-size:clamp(34px,6vw,62px);line-height:1.15;margin:22px 0 18px;max-width:640px;letter-spacing:.02em}
+.grad{background:linear-gradient(100deg,var(--bio),var(--si));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.lead{max-width:560px;color:var(--muted);font-size:17px}
+.lead b{font-weight:600}.bio{color:var(--bio)}.si{color:var(--si)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{padding:12px 24px;border-radius:12px;font:inherit;font-weight:600;font-size:15px;cursor:pointer;border:1px solid var(--line)}
+.btn.p{background:linear-gradient(100deg,var(--bio),var(--si));color:#03121c;border:0}
+.btn.s{background:var(--surface);color:var(--text);backdrop-filter:blur(8px)}
+.btn:hover{filter:brightness(1.1)}
+section{padding:64px 0}
+.eyebrow{font-size:12px;letter-spacing:.24em;color:var(--si);text-transform:uppercase}
+h2{font-size:26px;margin:6px 0 6px}
+.sub{color:var(--muted);font-size:14px;margin:0 0 34px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(3,1fr)}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;justify-content:space-between;padding:24px;border-radius:18px;background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(10px);transition:.25s}
+.card:hover{transform:translateY(-3px);border-color:var(--si);box-shadow:0 10px 34px color-mix(in srgb,var(--si) 18%,transparent)}
+.card .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.badge{font-size:11px;padding:2px 9px;border-radius:6px;border:1px solid var(--line);color:var(--muted)}
+.card svg{width:34px;height:34px}
+.card h3{margin:0 0 8px;font-size:18px}
+.card p{margin:0;font-size:13px;color:var(--muted)}
+.go{margin-top:22px;font-size:13px;color:var(--si);font-weight:600}
+.live{background:none;border:1px solid var(--line);color:var(--text);cursor:pointer;margin-top:22px;width:100%;padding:9px;border-radius:10px;font:inherit;font-size:13px;font-weight:600}
+.live:hover{border-color:var(--bio);color:var(--bio)}
+.pillar{padding:26px;border-radius:18px;background:var(--surface);border:1px solid var(--line);position:relative;overflow:hidden}
+.pillar::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:var(--c)}
+.pillar small{font-size:11px;letter-spacing:.2em;color:var(--c);text-transform:uppercase}
+.pillar h4{margin:8px 0;font-size:20px}
+.pillar p{margin:0;font-size:13px;color:var(--muted)}
+.pillar svg{width:44px;height:44px;margin-bottom:10px;color:var(--c)}
+.cross{margin-top:34px;padding:28px;border-radius:18px;border:1px dashed var(--line);background:var(--surface)}
+.cross h4{margin:0 0 14px;font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{font-size:13px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:linear-gradient(100deg,color-mix(in srgb,var(--bio) 10%,transparent),color-mix(in srgb,var(--si) 10%,transparent))}
+footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;font-size:12px;color:var(--muted)}
+#modal{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:18px;z-index:70}
+#modal.open{display:flex}
+.dlg{position:relative;max-width:520px;width:100%;background:var(--bg);border:1px solid var(--si);border-radius:18px;padding:26px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.dlg h3{margin:0 0 14px;font-size:18px;color:var(--bio)}
+.x{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--muted);font-size:20px;cursor:pointer}
+.feed{max-height:260px;overflow-y:auto;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:16px}
+.feed small{color:var(--muted);font-size:12px}
+.feed p{margin:2px 0 14px;font-size:13px;color:var(--muted)}
+.feed p.t{color:var(--text);font-weight:600;font-size:14px;margin-bottom:2px}
+</style>
 </head>
-<body class="min-h-screen flex flex-col justify-between">
+<body>
 
-    <!-- 導覽列 Navbar -->
-    <nav class="w-full px-6 py-4 border-b border-slate-800/80 flex justify-between items-center fixed top-0 bg-[#0A0F1D]/90 z-40 backdrop-blur-md">
-        <div class="flex items-center space-x-3">
-            <!-- Logo Icon Mockup -->
-            <div class="w-10 h-10 rounded-full border-2 border-[#D4AF37] flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 shadow-lg">
-                <span class="text-[#D4AF37] font-bold text-lg">丹奎</span>
-            </div>
-            <div>
-                <span class="text-lg font-bold tracking-wider text-white">丹奎投資</span>
-                <span class="text-xs text-slate-400 block tracking-widest uppercase">Intelliai Capital</span>
-            </div>
-        </div>
-        <div class="hidden md:flex space-x-6 text-sm text-slate-300">
-            <a href="#market" class="hover:text-[#D4AF37] transition">市場指標</a>
-            <a href="#pillars" class="hover:text-[#D4AF37] transition">核心理念</a>
-            <button onclick="toggleModal()" class="text-[#00F2FE] border border-[#00F2FE]/40 px-3 py-1 rounded-full hover:bg-[#00F2FE]/10 transition">📢 官方公告</button>
-        </div>
-    </nav>
+<nav><div class="wrap">
+  <div class="brand"><div class="logo">丹奎</div><div><b>丹奎投資</b><small>Intelliai Capital</small></div></div>
+  <div class="links">
+    <a href="#market">市場指標</a><a href="#pillars">核心理念</a>
+    <button class="pill" onclick="toggleModal()">官方公告</button>
+  </div>
+</div></nav>
 
-    <!-- 主視覺 Hero Section -->
-    <header class="pt-36 pb-16 px-6 text-center max-w-4xl mx-auto">
-        <div class="inline-block px-4 py-1.5 rounded-full border border-[#D4AF37]/40 bg-[#D4AF37]/10 text-[#D4AF37] text-xs font-semibold tracking-widest mb-6">
-            FAMILY OFFICE & STRATEGIC CAPITAL
-        </div>
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-            煉丹之精 ‧ 聚奎之智<br>
-            <span class="gold-gradient-text">穩健傳承與前瞻資本</span>
-        </h1>
-        <p class="text-slate-400 text-base md:text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-            丹奎投資（Intelliai Capital）立足家族資本之信任與穩健，深耕<span class="text-rose-400 font-medium">生物科技</span>與<span class="tech-blue-text font-medium">AI晶片半導體</span>雙引擎，致力於推動人類健康與智慧科技的長遠未來。
-        </p>
-        <div class="flex justify-center space-x-4">
-            <a href="#market" class="bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-slate-950 font-bold px-6 py-3 rounded-xl hover:opacity-90 transition shadow-lg">
-                即時市場觀測站
-            </a>
-            <button onclick="toggleModal()" class="glass-card px-6 py-3 rounded-xl text-slate-200 hover:text-white transition">
-                檢視最新公告
-            </button>
-        </div>
-    </header>
-
-    <!-- 核心亮點：即時市場觀測站（包含三個指定內容） -->
-    <section id="market" class="max-w-6xl mx-auto px-6 py-12 w-full">
-        <div class="text-center mb-10">
-            <h2 class="text-2xl font-bold tracking-wide text-white">即時市場動態與公告視窗</h2>
-            <p class="text-sm text-slate-400 mt-1">整合總體經濟指標、全球情緒數據與丹奎投資官方聲明</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6">
-            
-            <!-- 項目 1：台灣景氣燈號 -->
-            <a href="https://index.ndc.gov.tw/n/zh_tw" target="_blank" rel="noopener noreferrer" class="glass-card p-6 rounded-2xl transition duration-300 group block">
-                <div class="flex justify-between items-center mb-4">
-                    <span class="text-2xl">📊</span>
-                    <span class="text-xs text-[#D4AF37] border border-[#D4AF37]/30 px-2 py-0.5 rounded">國家發展委員會</span>
-                </div>
-                <h3 class="text-lg font-bold text-white group-hover:text-[#D4AF37] transition">台灣景氣對策燈號</h3>
-                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                    實時追蹤台灣總體經濟擴張與收縮訊號，作為資產配置與景氣循環之判斷基準。
-                </p>
-                <div class="mt-6 flex items-center text-xs text-[#00F2FE] font-medium">
-                    前往國發會觀測頁面 <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-                </div>
-            </a>
-
-            <!-- 項目 2：CNN 恐懼貪婪指標 -->
-            <a href="https://edition.cnn.com/markets/fear-and-greed?utm_source=hp" target="_blank" rel="noopener noreferrer" class="glass-card p-6 rounded-2xl transition duration-300 group block">
-                <div class="flex justify-between items-center mb-4">
-                    <span class="text-2xl">😱</span>
-                    <span class="text-xs text-[#00F2FE] border border-[#00F2FE]/30 px-2 py-0.5 rounded">CNN Markets</span>
-                </div>
-                <h3 class="text-lg font-bold text-white group-hover:text-[#00F2FE] transition">CNN 恐懼與貪婪指標</h3>
-                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                    監測美股與全球資本市場動量、避險需求與極端情緒，輔助市場風險控管。
-                </p>
-                <div class="mt-6 flex items-center text-xs text-[#00F2FE] font-medium">
-                    前往 CNN 市場恐懼指數 <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-                </div>
-            </a>
-
-            <!-- 項目 3：官方公告視窗卡片 -->
-            <div class="glass-card p-6 rounded-2xl border-rose-500/30 flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-2xl">📢</span>
-                        <span class="text-xs bg-rose-500/20 text-rose-300 border border-rose-500/40 px-2 py-0.5 rounded">即時廣播</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white">丹奎投資 官方公告</h3>
-                    <p class="text-xs text-slate-300 mt-2 line-clamp-2">
-                        【系統公告】2026 年第 3 季家族資產研報已發布，請開啟公告視窗檢視詳細內容...
-                    </p>
-                </div>
-                <button onclick="toggleModal()" class="mt-6 w-full py-2 bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-amber-300 rounded-lg border border-amber-500/30 transition">
-                    開啟文字公告視窗
-                </button>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 核心定位：丹 / 奎 / 家族資本 -->
-    <section id="pillars" class="max-w-6xl mx-auto px-6 py-12 w-full">
-        <div class="grid md:grid-cols-3 gap-8 text-left">
-            <div class="p-6 border-l-2 border-rose-500 bg-slate-900/40 rounded-r-xl">
-                <div class="text-xs font-bold text-rose-400 tracking-widest uppercase mb-1">BIOTECH ADVANCEMENT</div>
-                <h4 class="text-xl font-bold text-white mb-2">「丹」── 生醫與健康</h4>
-                <p class="text-xs text-slate-400 leading-relaxed">
-                    象徵如古法煉丹般的精準與執著。專注於新藥研發、精準醫療與預防醫學，為人類健康與生命品質作出實質貢獻。
-                </p>
-            </div>
-            <div class="p-6 border-l-2 border-[#00F2FE] bg-slate-900/40 rounded-r-xl">
-                <div class="text-xs font-bold text-[#00F2FE] tracking-widest uppercase mb-1">SILICON & AI EVOLUTION</div>
-                <h4 class="text-xl font-bold text-white mb-2">「奎」── 晶圓與 AI</h4>
-                <p class="text-xs text-slate-400 leading-relaxed">
-                    象徵將大地之砂化為矽晶 IC。深入佈局半導體供應鏈、前瞻晶片與人工智慧演算法，驅動下個世代的科技進程。
-                </p>
-            </div>
-            <div class="p-6 border-l-2 border-[#D4AF37] bg-slate-900/40 rounded-r-xl">
-                <div class="text-xs font-bold text-[#D4AF37] tracking-widest uppercase mb-1">FAMILY LEGACY</div>
-                <h4 class="text-xl font-bold text-white mb-2">家族資本 ── 穩健傳承</h4>
-                <p class="text-xs text-slate-400 leading-relaxed">
-                    以跨世代的嚴謹風控與誠信為基石。秉持 Intelliai 現代智慧思維，實現資本的長期增值與家族信任傳承。
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 彈出式公告文字視窗 Modal Window -->
-    <div id="noticeModal" class="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-50 hidden">
-        <div class="glass-card max-w-lg w-full rounded-2xl p-6 relative border border-[#D4AF37]/50 shadow-2xl">
-            <!-- 關閉按鈕 -->
-            <button onclick="toggleModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">✕</button>
-            
-            <div class="flex items-center space-x-2 mb-4">
-                <span class="w-3 h-3 bg-amber-400 rounded-full animate-ping"></span>
-                <h3 class="text-lg font-bold text-[#D4AF37]">丹奎投資有限公司 官方公告</h3>
-            </div>
-            
-            <div class="space-y-4 text-sm text-slate-300 max-h-60 overflow-y-auto pr-2 border-t border-b border-slate-800 py-4 my-4">
-                <div>
-                    <span class="text-xs text-slate-500">2026-09-20 | 策略公告</span>
-                    <p class="font-semibold text-white mt-0.5">【家族資產配置與總體市場展望】</p>
-                    <p class="text-xs text-slate-400 mt-1">
-                        因應全球 AI 算力基礎設施擴建與生醫基因療法的突破，丹奎投資（Intelliai Capital）已完成 2026 年第三季的投資組合動態調整。重點加碼半導體晶圓封裝與臨床新創資產。
-                    </p>
-                </div>
-                <div>
-                    <span class="text-xs text-slate-500">2026-08-15 | 合規聲明</span>
-                    <p class="font-semibold text-white mt-0.5">【免責與合規提醒】</p>
-                    <p class="text-xs text-slate-400 mt-1">
-                        本公司網站所載之台灣景氣燈號與 CNN 恐懼貪婪指標連結僅供內部研究與訪客參考，不構成任何型式之投資邀約或個股推薦。
-                    </p>
-                </div>
-            </div>
-
-            <div class="text-right">
-                <button onclick="toggleModal()" class="bg-[#D4AF37] text-slate-950 font-bold text-xs px-5 py-2 rounded-lg hover:bg-amber-400 transition">
-                    確認並關閉
-                </button>
-            </div>
-        </div>
+<header class="hero">
+  <canvas id="helix" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <span class="tag"><i></i>BIOTECH × AI SILICON · STRATEGIC CAPITAL</span>
+    <h1>從分子到晶片，<br><span class="grad">投資生命與智慧的未來</span></h1>
+    <p class="lead">丹奎投資（Intelliai Capital）以家族資本的穩健為基底，聚焦<b class="bio">生物科技</b>與<b class="si">AI 晶片半導體</b>兩大引擎，讓 DNA 的精準與矽晶的算力相互加乘。</p>
+    <div class="cta">
+      <a class="btn p" href="#market">即時市場觀測站</a>
+      <button class="btn s" onclick="toggleModal()">檢視最新公告</button>
     </div>
+  </div>
+</header>
 
-    <!-- 頁尾 Footer -->
-    <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500">
-        <p>© 2026 丹奎投資有限公司 Intelliai Capital Co., Ltd. All Rights Reserved.</p>
-        <p class="mt-2 text-slate-600">本網站資訊僅供家族辦公室內部交流與品牌形象展示。</p>
-    </footer>
+<section id="market"><div class="wrap">
+  <div class="eyebrow">Market Radar</div>
+  <h2>即時市場動態與公告</h2>
+  <p class="sub">整合總體經濟指標、全球市場情緒與丹奎投資官方聲明</p>
+  <div class="grid">
+    <a class="card" href="https://index.ndc.gov.tw/n/zh_tw" target="_blank" rel="noopener noreferrer">
+      <div>
+        <div class="top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--bio)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+          <span class="badge">國家發展委員會</span>
+        </div>
+        <h3>台灣景氣對策燈號</h3>
+        <p>如同景氣的「心電圖」，追蹤台灣總體經濟擴張與收縮訊號，作為資產配置與景氣循環的判斷基準。</p>
+      </div>
+      <div class="go">前往國發會觀測頁面 →</div>
+    </a>
+    <a class="card" href="https://edition.cnn.com/markets/fear-and-greed?utm_source=hp" target="_blank" rel="noopener noreferrer">
+      <div>
+        <div class="top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--si)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18l4-6"/><circle cx="12" cy="18" r="1.2"/></svg>
+          <span class="badge">CNN Markets</span>
+        </div>
+        <h3>CNN 恐懼與貪婪指標</h3>
+        <p>如同市場情緒的「感測器」，監測美股與全球資本市場的動能、避險需求與極端情緒，輔助風險控管。</p>
+      </div>
+      <div class="go">前往 CNN 市場恐懼指數 →</div>
+    </a>
+    <div class="card">
+      <div>
+        <div class="top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg>
+          <span class="badge">官方公告</span>
+        </div>
+        <h3>丹奎投資 官方公告</h3>
+        <p>2026 年第 3 季投資組合動態調整已發布，請開啟公告視窗檢視詳細內容。</p>
+      </div>
+      <button class="live" onclick="toggleModal()">開啟文字公告視窗</button>
+    </div>
+  </div>
+</div></section>
 
-    <!-- JavaScript 彈窗控制 logic -->
-    <script>
-        function toggleModal() {
-            const modal = document.getElementById('noticeModal');
-            modal.classList.toggle('hidden');
-        }
-    </script>
+<section id="pillars"><div class="wrap">
+  <div class="eyebrow">Our Dual Engine</div>
+  <h2>雙引擎 · 一份傳承</h2>
+  <p class="sub">丹，煉就生命之精；奎，聚成智慧之芯。</p>
+  <div class="grid">
+    <div class="pillar" style="--c:var(--bio)">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 6c0 12 20 12 20 24s-20 12-20 12M34 6c0 12-20 12-20 24s20 12 20 12"/><path d="M17 12h14M17 36h14M19 24h10"/></svg>
+      <small>Biotech Advancement</small>
+      <h4>「丹」── 生醫與健康</h4>
+      <p>如煉丹般精準而執著。聚焦新藥研發、基因與細胞療法、精準醫療與預防醫學，為生命品質創造長期價值。</p>
+    </div>
+    <div class="pillar" style="--c:var(--si)">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="12" width="24" height="24" rx="3"/><rect x="19" y="19" width="10" height="10"/><path d="M18 6v6M24 6v6M30 6v6M18 36v6M24 36v6M30 36v6M6 18h6M6 24h6M6 30h6M36 18h6M36 24h6M36 30h6"/></svg>
+      <small>Silicon &amp; AI Evolution</small>
+      <h4>「奎」── 晶圓與 AI</h4>
+      <p>將砂石淬鍊為矽晶 IC。佈局半導體供應鏈、AI 加速晶片與演算法，為下一世代的算力奠基。</p>
+    </div>
+    <div class="pillar" style="--c:var(--gold)">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l15 6v11c0 9-6 15-15 19C15 38 9 32 9 23V12z"/><path d="M17 24l5 5 9-10"/></svg>
+      <small>Family Legacy</small>
+      <h4>家族資本 ── 穩健傳承</h4>
+      <p>以跨世代的嚴謹風控與誠信為基石，結合 Intelliai 的數據思維，實現資本的長期增值與信任傳承。</p>
+    </div>
+  </div>
+  <div class="cross">
+    <h4>兩大引擎的交會點</h4>
+    <div class="chips"><span>AI 輔助藥物探索</span><span>基因定序與生醫運算</span><span>精準醫療晶片</span><span>醫材感測 IC</span><span>臨床數據與演算法</span></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <p>© 2026 丹奎投資有限公司 Intelliai Capital Co., Ltd. All Rights Reserved.</p>
+  <p>本網站資訊僅供家族辦公室內部交流與品牌形象展示。</p>
+</div></footer>
+
+<div id="modal" onclick="if(event.target===this)toggleModal()">
+  <div class="dlg" role="dialog" aria-modal="true" aria-label="官方公告">
+    <button class="x" onclick="toggleModal()" aria-label="關閉">✕</button>
+    <h3>丹奎投資有限公司 官方公告</h3>
+    <div class="feed">
+      <small>2026-09-20 | 策略公告</small>
+      <p class="t">【家族資產配置與總體市場展望】</p>
+      <p>因應全球 AI 算力基礎設施擴建與生醫基因療法的突破，丹奎投資（Intelliai Capital）已完成 2026 年第三季的投資組合動態調整，重點加碼半導體晶圓封裝與臨床新創資產。</p>
+      <small>2026-08-15 | 合規聲明</small>
+      <p class="t">【免責與合規提醒】</p>
+      <p>本公司網站所載之台灣景氣燈號與 CNN 恐懼貪婪指標連結僅供內部研究與訪客參考，不構成任何形式之投資邀約或個股推薦。</p>
+    </div>
+    <div style="text-align:right"><button class="btn p" onclick="toggleModal()" style="padding:8px 20px;font-size:13px">確認並關閉</button></div>
+  </div>
+</div>
+
+<script>
+function toggleModal(){document.getElementById('modal').classList.toggle('open')}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('modal').classList.remove('open')});
+(function(){
+  var c=document.getElementById('helix'),g=c.getContext('2d'),W,H,t=0;
+  var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){var r=c.getBoundingClientRect(),d=window.devicePixelRatio||1;W=r.width;H=r.height;c.width=W*d;c.height=H*d;g.setTransform(d,0,0,d,0,0)}
+  function draw(){
+    var cs=getComputedStyle(document.documentElement),bio=cs.getPropertyValue('--bio').trim(),si=cs.getPropertyValue('--si').trim();
+    g.clearRect(0,0,W,H);
+    var cx=W*.55,A=Math.min(W*.22,120),n=Math.floor(H/16),i,p,x1,x2,y,z;
+    for(i=0;i<n;i++){
+      y=i*16+8;p=t+i*.32;x1=cx+Math.sin(p)*A;x2=cx-Math.sin(p)*A;z=Math.cos(p);
+      if(i%2===0){
+        g.globalAlpha=.35;g.strokeStyle=si;g.lineWidth=1.2;g.beginPath();g.moveTo(x1,y);g.lineTo(x2,y);g.stroke();
+        g.fillStyle=bio;g.fillRect((x1+x2)/2-2,y-2,4,4);
+      }
+      g.globalAlpha=.55+.45*z;g.fillStyle=bio;g.beginPath();g.arc(x1,y,3+z*1.6,0,7);g.fill();
+      g.globalAlpha=.55-.45*z;g.fillStyle=si;g.beginPath();g.arc(x2,y,3-z*1.6,0,7);g.fill();
+    }
+    g.globalAlpha=.25;g.strokeStyle=si;g.lineWidth=1;
+    for(i=0;i<6;i++){y=H*(.12+i*.15);g.beginPath();g.moveTo(W,y);g.lineTo(W-40-i*14,y);g.lineTo(W-60-i*14,y+14);g.stroke();g.fillStyle=si;g.fillRect(W-62-i*14,y+12,4,4)}
+    g.globalAlpha=1;
+  }
+  function loop(){t+=.018;draw();requestAnimationFrame(loop)}
+  size();window.addEventListener('resize',function(){size();draw()});
+  if(still)draw();else loop();
+})();
+</script>
 </body>
 </html>
